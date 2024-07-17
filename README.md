@@ -1,6 +1,8 @@
 # Roblox-sint
 Utilizes roblox's API and cavalier's API to search if a user has been breached
 
+You can also use the Cavalier API to implement this for other platforms, such as Minecraft or something
+
 # Usage
 `python main.py USER_ID`
 
