@@ -1,3 +1,5 @@
+# TODO: implement unique-ness functionality (force only unique usernames to be returned)
+
 import requests
 
 class Roblox:
