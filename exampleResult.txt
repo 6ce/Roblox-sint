@@ -1,0 +1,30 @@
+Cavalier results for: 'BoneCollector201':
+[
+    {
+        "total_corporate_services": 0,
+        "total_user_services": 50,
+        "date_compromised": "2022-04-03T11:51:34.000Z",
+        "computer_name": "ericc",
+        "operating_system": "Windows 10 Home x64",
+        "malware_path": " C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\AppLaunch.exe",
+        "antiviruses": [
+            "Windows Defender"
+        ],
+        "ip": "73.119.***.***",
+        "top_passwords": [
+            "1********@",
+            "1********@",
+            "w*******2",
+            "1*******c",
+            "1*********@"
+        ],
+        "top_logins": [
+            "e************@hotmail.com",
+            "_|",
+            "b**************1",
+            "w***********@hotmail.com",
+            "e******p"
+        ]
+    }
+]
+
