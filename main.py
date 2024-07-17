@@ -1,4 +1,4 @@
-# TODO: import a snusbase searching functionality
+# TODO: implement a snusbase searching functionality
 
 import json
 import sys
