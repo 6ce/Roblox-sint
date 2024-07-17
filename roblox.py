@@ -1,11 +1,13 @@
-# TODO: implement unique-ness functionality (force only unique usernames to be returned)
-
 import requests
 
 class Roblox:
     """A module for interacting with the https://roblox.com API"""
     def __init__(self):
         self.api = "https://users.roblox.com/v1"
+
+    """Removes duplicate items from a list"""
+    def _removeDupes(self, list: list) -> list:
+        return list(set(list))
 
     """Performs a get request to the input API path on https://roblox.com"""
     def _get(self, path: str) -> requests.Response:
@@ -38,6 +40,6 @@ class Roblox:
             data: dict = response.json()
             users = [name["name"] for name in data["data"]]
             users.append(currentUser)
-            return users
+            return self._removeDupes(users)
         except:
-            return ["No past usernames"]
+            return [currentUser]
