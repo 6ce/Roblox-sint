@@ -29,7 +29,7 @@ class Roblox:
             return ["User not found"]
 
         id = str(userId)
-        path = "/users/{}/username-history".format(id)
+        path = "/users/{}/username-history?limit=100".format(id)
         response = self._get(path)
         
         try:
