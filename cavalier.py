@@ -5,13 +5,13 @@ class Cavalier:
     def __init__(self):
         self.api = "https://cavalier.hudsonrock.com/api/json/v2"
 
-    """Performs a get request to the input api path on https://cavalier.hudsonrock.com"""
     def _get(self, path: str) -> requests.Response:
+        """Performs a get request to the input API path on https://cavalier.hudsonrock.com"""
         url = self.api + path
         return requests.get(url)
 
-    """Performs a username search on https://cavalier.hudsonrock.com"""
     def usernameSearch(self, username: str) -> list | str:
+        """Performs a username search on https://cavalier.hudsonrock.com"""
         path = "/osint-tools/search-by-username?username={}".format(username)
         response = self._get(path)
         
