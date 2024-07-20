@@ -5,17 +5,17 @@ class Roblox:
     def __init__(self):
         self.api = "https://users.roblox.com/v1"
 
-    """Removes duplicate items from a list"""
-    def _removeDupes(self, list: list) -> list:
-        return list(set(list))
+    def _removeDupes(self, lst: list) -> list:
+        """Removes duplicate items from a list"""
+        return list(set(lst))
 
-    """Performs a get request to the input API path on https://roblox.com"""
     def _get(self, path: str) -> requests.Response:
+        """Performs a get request to the input API path on https://roblox.com"""
         url = self.api + path
         return requests.get(url)
     
-    """Get's the input userId's username"""
     def getUsername(self, userId: int) -> str:
+        """Get's the input userId's username"""
         id = str(userId)
         path = "/users/{}".format(id)
         response = self._get(path)
@@ -26,8 +26,8 @@ class Roblox:
         except:
             return "User not found"
 
-    """Get's the input userId's list of past usernames (and current)"""
     def getPastUsernames(self, userId: int) -> list[str]:
+        """Get's the input userId's list of past usernames, then appends the current username to the list"""
         currentUser = self.getUsername(userId)
         if currentUser == "User not found":
             return ["User not found"]
@@ -41,5 +41,5 @@ class Roblox:
             users = [name["name"] for name in data["data"]]
             users.append(currentUser)
             return self._removeDupes(users)
-        except:
+        except Exception as e:
             return [currentUser]
