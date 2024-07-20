@@ -18,9 +18,9 @@ def main(userId: int):
     if usernames[0] == "User not found":
         return exit("User not found")
 
-    estimated = str(len(usernames) * TIME_PER_CAVALIER_SEARCH)
+    estimated = len(usernames) * TIME_PER_CAVALIER_SEARCH
     print("Searching for usernames: {}".format(str(usernames)))
-    print("Estimated search time: {} seconds".format(estimated))
+    print("Estimated search time: {} seconds".format(str(estimated)))
 
     for user in usernames:
         print("Doing cavalier search for '{}'".format(user))
