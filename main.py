@@ -1,12 +1,11 @@
-# TODO: implement a snusbase searching functionality
-
 import json
 import sys
 import time
+import snusbase
 from cavalier import Cavalier
 from roblox import Roblox
 
-TIME_PER_CAVALIER_SEARCH = 1.5 # time per cavalier search (for estimating total time)
+TIME_PER_SEARCH = 1.5 * 2 # time per search (both cavalier and snusbase)
 
 def main(userId: int):
     results = ""
@@ -18,7 +17,7 @@ def main(userId: int):
     if usernames[0] == "User not found":
         return exit("User not found")
 
-    estimated = len(usernames) * TIME_PER_CAVALIER_SEARCH
+    estimated = len(usernames) * TIME_PER_SEARCH
     print("Searching for usernames: {}".format(str(usernames)))
     print("Estimated search time: {} seconds".format(str(estimated)))
 
@@ -26,7 +25,16 @@ def main(userId: int):
         print("Doing cavalier search for '{}'".format(user))
         result = cavalier.usernameSearch(user)
         _result = json.dumps(result, indent=4)
-        results += f"Cavalier results for: '{user}':\n{_result}\n\n"
+        results += f"Cavalier results for: '{user}':\n{_result}\n"
+
+        print("Doing Snusbase search for '{}'".format(user))
+        result2 = snusbase.search(user, "username")
+        if result2["success"]:
+            _result2 = json.dumps(result2["data"], indent=4)
+            results += f"Snusbase results for: '{user}':\n{_result2}\n\n"
+        else:
+            results += f"Failed to search {user} with Snusbase: {result2["errors"]}\n\n"
+
         time.sleep(0.5)
 
     with open("result.txt", "w") as file:
