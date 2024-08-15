@@ -23,7 +23,7 @@ def main(userId: int):
     print("Estimated search time: {} seconds".format(str(estimated)))
 
     for user in usernames:
-        print("Doing cavalier search for '{}'".format(user))
+        print("Doing Cavalier search for '{}'".format(user))
         result = cavalier.usernameSearch(user)
         _result = json.dumps(result, indent=4)
         results += f"Cavalier results for: '{user}':\n{_result}\n"
