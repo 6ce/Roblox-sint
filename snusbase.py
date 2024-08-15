@@ -10,7 +10,7 @@ class Snusbase:
 
     def _isValidQueryType(self, queryType: str) -> bool:
         """Returns whether or not the input queryType is valid"""
-        return queryType.lower() in self.validQueryTypes
+        return queryType.lower() in self._validQueryTypes
 
     def search(self, query: str, queryType="username") -> list[dict]:
         """Performs a search on the input query of queryType"""
