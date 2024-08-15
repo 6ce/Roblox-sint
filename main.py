@@ -1,7 +1,7 @@
 import json
 import sys
 import time
-import snusbase
+from snusbase import Snusbase
 from cavalier import Cavalier
 from roblox import Roblox
 
@@ -10,6 +10,7 @@ TIME_PER_SEARCH = 1.5 * 2 # time per search (both cavalier and snusbase)
 def main(userId: int):
     results = ""
 
+    snusbase = Snusbase()
     cavalier = Cavalier()
     roblox = Roblox()
 
