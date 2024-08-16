@@ -1,3 +1,5 @@
+SOME RESULTS IN HERE ARE CENSORED FOR PRIVACY
+
 Cavalier results for: 'BoneCollector201':
 [
     {
@@ -5,7 +7,7 @@ Cavalier results for: 'BoneCollector201':
         "total_user_services": 50,
         "date_compromised": "2022-04-03T11:51:34.000Z",
         "stealer_family": "RedLine",
-        "computer_name": "ericc",
+        "computer_name": "*****",
         "operating_system": "Windows 10 Home x64",
         "malware_path": " C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\AppLaunch.exe",
         "antiviruses": [
@@ -31,8 +33,8 @@ Cavalier results for: 'BoneCollector201':
 Snusbase results for: 'BoneCollector201':
 [
     {
-        "email": "WrecKxBonecollector@yahoo.com",
-        "password": "2MHEE",
+        "email": "************@yahoo.com",
+        "password": "****",
         "source": "0643_ADULTFRIENDFINDER_COM_220M_DATING_2016",
         "username": "bonecollector201"
     }
