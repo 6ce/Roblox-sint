@@ -7,7 +7,8 @@ You can re-use the Snusbase and Cavalier modules to check on other platforms suc
 1. Install [Python](https://python.org)
 2. Download the repository as a zip file and unzip it
 3. Open a command terminal in the repositories directory
-4. Now you're ready to run the usage commands
+4. Run the command `pip install requests`
+5. Now you're ready to run the usage commands
 
 # Usage
 `python main.py USER_ID`
