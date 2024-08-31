@@ -10,9 +10,27 @@ class Roblox:
         return list(set(lst))
 
     def _get(self, path: str) -> requests.Response:
-        """Performs a get request to the input API path on https://roblox.com"""
+        """Performs a GET request to the input API path on https://users.roblox.com"""
         url = self.api + path
         return requests.get(url)
+    
+    def _post(self, path: str, data: dict) -> requests.Response:
+        """Performs a POST request to the input API path on https://users.roblox.com"""
+        url = self.api + path
+        headers = {"Content-Type": "application/json"}
+        return requests.post(url, headers=headers, json=data)
+    
+    def getUserId(self, username: str) -> int:
+        """Get's the input username's userId"""
+        path = "/usernames/users"
+        data = {"usernames": [username], "excludeBannedUsers": False}
+        response = self._post(path, data)
+        
+        try:
+            data: list = response.json()["data"]
+            return data[0]["id"]
+        except:
+            return "User not found"
     
     def getUsername(self, userId: int) -> str:
         """Get's the input userId's username"""
