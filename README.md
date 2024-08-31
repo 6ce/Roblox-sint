@@ -11,12 +11,12 @@ You can re-use the Snusbase and Cavalier modules to check on other platforms suc
 5. Now you're ready to run the usage commands
 
 # Usage
-`python main.py USER_ID`
+`python main.py USER_ID_OR_NAME`
 
 # Example Usage
 Assume we are searching for this user: https://www.roblox.com/users/313528378
 
-`python main.py 313528378`
+`python main.py BoneCollector201` OR `python main.py 313528378`
 
 The example's results can be seen [here](exampleResult.txt)
 
