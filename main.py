@@ -5,7 +5,7 @@ from snusbase import Snusbase
 from cavalier import Cavalier
 from roblox import Roblox
 
-TIME_PER_SEARCH = 1.5 * 2 # time per search (both cavalier and snusbase)
+TIME_PER_SEARCH = 1.5 # time per search (both cavalier and snusbase)
 
 def main(query: str):
     results = ""
@@ -38,12 +38,14 @@ def main(query: str):
         _result = json.dumps(result, indent=4)
         results += f"Cavalier results for: '{user}':\n{_result}\n"
 
+        """
         result2 = snusbase.search(user, "username")
         if result2["success"]:
             _result2 = json.dumps(result2["data"], indent=4)
             results += f"Snusbase results for: '{user}':\n{_result2}\n\n"
         else:
             results += f"Failed to search {user} with Snusbase: {result2["errors"]}\n\n"
+        """
 
         time.sleep(0.5)
 
