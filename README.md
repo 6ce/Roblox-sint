@@ -1,7 +1,7 @@
 # Roblox-sint
-Utilizes Roblox, Cavalier, and Snusbase APIs to see if a user has been breached
+Utilizes the Roblox and Cavalier APIs to see if a user has been breached
 
-You can re-use the Snusbase and Cavalier modules to check on other platforms such as Minecraft or something
+You can re-use the Cavalier module to check on other platforms such as Minecraft or something
 
 # Installation
 1. Install [Python](https://python.org)
